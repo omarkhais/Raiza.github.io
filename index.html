@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route and Flood Zone Alert</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #destinationInput {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            z-index: 1000;
+            padding: 5px;
+            font-size: 16px;
+        }
+        #calculateRouteButton {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            z-index: 1000;
+            padding: 5px;
+            font-size: 16px;
+        }
+        #generateFloodZonesButton {
+            position: absolute;
+            top: 70px;
+            left: 50px;
+            z-index: 1000;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="destinationInput" placeholder="Enter destination address">
+    <button id="calculateRouteButton">Calculate Route</button>
+    <button id="generateFloodZonesButton">Generate Flood Zones</button>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-geometryutil/0.6.0/leaflet.geometryutil.js"></script>
+    <script src="https://api.openrouteservice.org/js/ors-client.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="app.js"></script> <!-- Assuming the JavaScript is in app.js -->
+</body>
+</html>
